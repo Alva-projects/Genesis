@@ -6,14 +6,12 @@ font-family: "Mulish", sans-serif;
     font-style: normal;
     margin: 0px;
 }
-main {
-    margin: 0px;
-    max-width: 1500px;
-    justify-content: center;
-}
+
 .navbar {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 30px;
+    margin-top: 30px;
 }
 
 .nav-logo {
@@ -36,10 +34,10 @@ main {
 }
 
 .navbar-active {
-    background-color: #3a4a6e;
+    background-color: #4A4FF2;
 }
 .navbar a:hover {
-    background-color: #647FBC;
+    background-color: #d2b968;
     transition: 0.5s;
 }
 /*Footer*/
