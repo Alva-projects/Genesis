@@ -1,9 +1,9 @@
 
 body {
-    font-family: "Mulish", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
+font-family: "Mulish", sans-serif;
+     font-optical-sizing: auto;
+     font-weight: 700;
+    font-style: normal;
     margin: 0px;
 }
 main {
@@ -26,7 +26,6 @@ main {
 
 .navbar ul {
     display: flex;
-
 }
 
 .navbar a {
@@ -42,4 +41,35 @@ main {
 .navbar a:hover {
     background-color: #647FBC;
     transition: 0.5s;
+}
+/*Footer*/
+.footer-navbar {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-left: 12px;
+}
+.footer-right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-right {
+    margin-left: 30px;
+    margin-right: 40px;
+}
+.footer-navbar ul{
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-around;
+}
+.footer-navbar a {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+}
+
+.footer-svg {
+    justify-content: space-around;
 }
