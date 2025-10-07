@@ -270,6 +270,15 @@ label {
   color: #979797;
 }
 
+.container-gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .container__first {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -314,10 +323,10 @@ label {
 .grid__first {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 50% 1fr 1fr 1fr;
-  grid-template-columns: 50% 1fr 1fr 1fr;
-  -ms-grid-rows: 40px 40px 40px;
-  grid-template-rows: 40px 40px 40px;
+  -ms-grid-columns: (1fr)[7];
+  grid-template-columns: repeat(7, 1fr);
+  -ms-grid-rows: 3fr;
+  grid-template-rows: 3fr;
 }
 .grid__first > *:nth-child(1) {
   -ms-grid-row: 1;
@@ -336,59 +345,40 @@ label {
   -ms-grid-column: 4;
 }
 .grid__first > *:nth-child(5) {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
 }
 .grid__first > *:nth-child(6) {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
+  -ms-grid-row: 1;
+  -ms-grid-column: 6;
 }
 .grid__first > *:nth-child(7) {
-  -ms-grid-row: 2;
-  -ms-grid-column: 3;
-}
-.grid__first > *:nth-child(8) {
-  -ms-grid-row: 2;
-  -ms-grid-column: 4;
-}
-.grid__first > *:nth-child(9) {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-}
-.grid__first > *:nth-child(10) {
-  -ms-grid-row: 3;
-  -ms-grid-column: 2;
-}
-.grid__first > *:nth-child(11) {
-  -ms-grid-row: 3;
-  -ms-grid-column: 3;
-}
-.grid__first > *:nth-child(12) {
-  -ms-grid-row: 3;
-  -ms-grid-column: 4;
+  -ms-grid-row: 1;
+  -ms-grid-column: 7;
 }
 
 .grid__first-left {
   -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
+  -ms-grid-row-span: 1;
   -ms-grid-column: 1;
-  grid-area: 1/1/3/1;
+  -ms-grid-column-span: 2;
+  grid-area: 1/1/2/3;
 }
 
 .grid__first-middle {
   -ms-grid-row: 1;
   -ms-grid-row-span: 2;
-  -ms-grid-column: 3;
+  -ms-grid-column: 5;
   -ms-grid-column-span: 1;
-  grid-area: 1/3/3/4;
+  grid-area: 1/5/3/6;
 }
 
 .grid__first-right {
   -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  -ms-grid-column: 4;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 7;
   -ms-grid-column-span: 1;
-  grid-area: 1/4/3/5;
+  grid-area: 1/7/2/8;
 }
 
 /*Grid 2 */
