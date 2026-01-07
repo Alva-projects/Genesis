@@ -1,4 +1,9 @@
+main {
+    display: flex;
+    flex-direction: column;
+}
 .projects-container-1 {
+    margin-top: 40px;
     display: flex;
     justify-content: space-between;
 }
