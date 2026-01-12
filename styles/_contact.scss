@@ -60,3 +60,12 @@
         display: flex;
         justify-content: center;
     }
+
+    @media (max-width: 768px) {
+    .contact-container-2 img{
+        max-width: 100%;
+    }
+    .contact-container-1-left {
+        max-width: 100%;
+    }
+    }

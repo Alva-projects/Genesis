@@ -36,4 +36,24 @@ main {
     grid-auto-flow: column;
     grid-gap: 15px;
 }
-
+@media (max-width: 768px) {
+    
+.projects-container-1 {
+    display: block;
+}
+.projects-container-1-left {
+    max-width: 100%;
+}
+#img-big {
+    width: 100%;
+}
+.projects-container-images {
+    display: flex;
+    flex-wrap: wrap;
+    object-fit: contain;
+    margin-bottom: 14px;
+}
+.projects-container-images img {
+    width: 100%;
+}
+}
