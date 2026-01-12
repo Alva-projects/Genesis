@@ -1,7 +1,6 @@
     body {
     font-family: "Mulish", sans-serif;
         font-optical-sizing: auto;
-        font-weight: 700;
         font-style: normal;
         margin: 0px;
     }
@@ -43,9 +42,6 @@
     .footer-navbar {
         display: flex;
         justify-content: space-between;
-        margin-top: 30px;
-        margin-bottom: 30px;
-        margin-left: 12px;
     }
     .footer-right {
         display: flex;
@@ -71,3 +67,14 @@
     .footer-svg {
         justify-content: space-around;
     }
+
+    /* Media queries */
+@media (max-width: 1024px) {
+
+}
+
+@media (max-width: 768px) {
+    nav footer {
+        width: 100%;
+    }
+}

@@ -47,11 +47,10 @@ label {
 }
 
 .gallery-container {
+  display: block;
   column-count: 3;
-  gap: 1rem;
   max-width: 1000px;
-  margin: 10 auto;
-  padding: 1rem;
+  margin: 10px auto;
 }
 
 .gallery-container img {
@@ -64,12 +63,11 @@ label {
 /* Award grid */
 .awards-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 1rem;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 2rem 2rem;
   max-width: 1000px;
   margin: 2rem auto;
   border-top: 1px solid #ccc;
-  gap: 40px 10px;
   padding-top: 1rem;
 }
 
@@ -94,22 +92,47 @@ label {
   font-weight: 400;
   color: #888;
 }
+
 .award-year {
   text-align: right;
   color: #555;
 }
+
+/* Media queries */
 @media (max-width: 1024px) {
   .gallery-container {
+    column-count: 2;
+  }
+  
+  .awards-container {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 768px) {
   .gallery-container {
-    grid-template-columns: 1fr;
-    .awards-container {
-    grid-template-columns: 1fr;
+    column-count: 1;
   }
+  
+  .awards-container {
+    grid-template-columns: 1fr;
   }
 
+  .container__first {
+    display: flex;
+    justify-content: center;
+    max-width: 360px;
+  }
+  .font-bold.title {
+    font-size: 16px;
+    padding-right: 12px;
+  }
+
+  .container__first-left {
+    padding-left: 18px;
+  }
+  .container__first-right {
+    font-size: 10px;
+    margin-bottom: 10px;
+  }
 }
