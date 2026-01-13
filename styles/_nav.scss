@@ -1,137 +1,143 @@
-    body {
-    font-family: "Mulish", sans-serif;
-        font-optical-sizing: auto;
-        font-style: normal;
-        margin: 0px;
-    }
+/* --- GLOBAL RESET --- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Mulish", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* inga extra scrollbars */
+}
+
+/* --- NAVBAR --- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px auto;
+  padding: 0.1rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.nav-logo img {
+  width: 120px; /* desktop-storlek */
+  height: auto;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: black;
+  padding: 12px;
+}
+
+.navbar a:hover {
+  background-color: #dbae1b;
+  transition: 0.5s;
+}
+
+.navbar-active {
+  background-color: #4A4FF2;
+}
+
+/* --- FOOTER --- */
+.footer-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.footer-navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1rem;
+}
+
 .footer-navbar img {
-    size: 10px;
-    height: 14px;
-     }
+  margin-bottom: 1rem;
+}
 
-    .navbar {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 30px;
-        margin-top: 30px;
-    }
+.footer-navbar a {
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+}
 
-    .nav-logo {
-        margin: 12px;
-        align-items: center;
-    }
-    .navbar li {
-        list-style-type: none;
-    }
+.footer-right {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin: 0;
+}
 
-    .navbar ul {
-        display: flex;
-    }
-
-    .navbar a {
-        text-decoration: none;
-        color: black;
-        padding: 15px;
-        align-items: center;
-    }
-
-    .navbar-active {
-        background-color: #4A4FF2;
-    }
-    .navbar a:hover {
-        background-color: #dbae1b;
-        transition: 0.5s;
-    }
-    /*Footer*/
-    .footer-navbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .footer-right {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .footer-right {
-        margin-left: 30px;
-        margin-right: 40px;
-    }
-    .footer-navbar ul{
-        list-style: none;
-        text-decoration: none;
-        display: flex;
-        justify-content: space-around;
-    }
-    .footer-navbar a {
-        text-decoration: none;
-        color: black;
-        padding: 10px;
-    }
-
-    .footer-svg {
-      display: flex;
-      justify-content: space-around;
-    }
-    .contact-container-2 img {
-      height: 80%;
-    }
-    /* Media queries */
+/* --- MEDIA QUERIES MOBIL --- */
 @media (max-width: 768px) {
-    .footer-navbar {
-    width: 100%;
-    margin: 0;
-    }
-
-    body {
-    margin: 0px auto;
-    }
-
+  /* Navbar */
   .navbar {
-    display: flex;
-    justify-content: space-between;
-    font-size: 10px;
+    flex-direction: column; /* logga ovanför menyn */
+    align-items: center;
     padding: 1rem;
-    margin-bottom: 10px;
-    }
-
-  .navbar img {
-    size: 10px;
-    height: 14px;
-     }
-
-  .navbar a {
-    padding: 10px;
+    margin: 0 auto;
+    margin-bottom: 2rem;
   }
-  
+
+  .nav-logo img {
+    width: 80px; /* mindre logga på mobil */
+    margin-bottom: 1rem;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  /* Footer */
+  .footer-navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .footer-right {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    margin: 0;
+  }
+
+  .footer-navbar ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+  }
 }
 
 @media (max-width: 400px) {
-  body {
-    margin: 0px;
+  .nav-logo img {
+    width: 60px; /* ännu mindre logga */
   }
 
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    font-size: 10px;
-    padding: 1rem;
-    margin-bottom: 10px;
-    }
-    nav {
-      
-    }
-
-  .navbar img {
-    size: 10px;
-    height: 14px;
-     }
-
-  .navbar a {
-    padding: 10px;
-    margin: 0px auto;
-  }
-  .footer-navbar {
-    width: 50%;;
+  .navbar a, .footer-navbar a {
+    margin-bottom: 12px;
+    padding: 6px;
+    text-align: center;
   }
 }

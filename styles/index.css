@@ -1,44 +1,46 @@
+@charset "UTF-8";
+/* --- GLOBAL RESET --- */
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Mulish", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-  margin: 0px;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* inga extra scrollbars */
 }
 
-.footer-navbar img {
-  size: 10px;
-  height: 14px;
-}
-
+/* --- NAVBAR --- */
 .navbar {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 30px;
-  margin-top: 30px;
-}
-
-.nav-logo {
-  margin: 12px;
   align-items: center;
+  margin: 30px auto;
+  padding: 0.1rem;
+  width: 100%;
+  max-width: 1200px;
 }
 
-.navbar li {
-  list-style-type: none;
+.nav-logo img {
+  width: 120px; /* desktop-storlek */
+  height: auto;
 }
 
 .navbar ul {
   display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .navbar a {
   text-decoration: none;
   color: black;
-  padding: 15px;
-  align-items: center;
-}
-
-.navbar-active {
-  background-color: #4A4FF2;
+  padding: 12px;
 }
 
 .navbar a:hover {
@@ -46,29 +48,31 @@ body {
   transition: 0.5s;
 }
 
-/*Footer*/
+.navbar-active {
+  background-color: #4A4FF2;
+}
+
+/* --- FOOTER --- */
 .footer-navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.footer-right {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.footer-right {
-  margin-left: 30px;
-  margin-right: 40px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
 }
 
 .footer-navbar ul {
   list-style: none;
-  text-decoration: none;
+  padding: 0;
+  margin: 0;
   display: flex;
-  justify-content: space-around;
+  gap: 1rem;
+}
+
+.footer-navbar img {
+  margin-bottom: 1rem;
 }
 
 .footer-navbar a {
@@ -77,60 +81,58 @@ body {
   padding: 10px;
 }
 
-.footer-svg {
+.footer-right {
   display: flex;
-  justify-content: space-around;
+  gap: 1rem;
+  align-items: center;
+  margin: 0;
 }
 
-.contact-container-2 img {
-  height: 80%;
-}
-
-/* Media queries */
+/* --- MEDIA QUERIES MOBIL --- */
 @media (max-width: 768px) {
+  /* Navbar */
+  .navbar {
+    flex-direction: column; /* logga ovanför menyn */
+    align-items: center;
+    padding: 1rem;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+  }
+  .nav-logo img {
+    width: 80px; /* mindre logga på mobil */
+    margin-bottom: 1rem;
+  }
+  .navbar ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  /* Footer */
   .footer-navbar {
-    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+  .footer-right {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
     margin: 0;
   }
-  body {
-    margin: 0px auto;
-  }
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    font-size: 10px;
-    padding: 1rem;
-    margin-bottom: 10px;
-  }
-  .navbar img {
-    size: 10px;
-    height: 14px;
-  }
-  .navbar a {
-    padding: 10px;
+  .footer-navbar ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
   }
 }
 @media (max-width: 400px) {
-  body {
-    margin: 0px;
+  .nav-logo img {
+    width: 60px; /* ännu mindre logga */
   }
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    font-size: 10px;
-    padding: 1rem;
-    margin-bottom: 10px;
-  }
-  .navbar img {
-    size: 10px;
-    height: 14px;
-  }
-  .navbar a {
-    padding: 10px;
-    margin: 0px auto;
-  }
-  .footer-navbar {
-    width: 50%;
+  .navbar a, .footer-navbar a {
+    margin-bottom: 12px;
+    padding: 6px;
+    text-align: center;
   }
 }
 .mulish {
@@ -309,21 +311,30 @@ input {
     max-width: 100%;
   }
 }
-html, body {
-  height: 100%;
-  margin: 0 auto;
-  padding: 0;
+/* 1. Global reset */
+* {
+  box-sizing: border-box; /* viktig för padding + width */
 }
 
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* förhindrar horisontell scroll */
+}
+
+/* 2. Huvudlayout */
 main {
   max-width: 1000px;
   margin: 0 auto;
+  width: 100%;
 }
 
 body, nav, footer {
-  width: 80%;
+  width: 100%;
   max-width: 2000px;
-  margin: auto;
+  margin: 0 auto;
 }
 
 body p {
@@ -344,22 +355,35 @@ label {
   color: #979797;
 }
 
+/* 3. Container layout */
 .container__first {
   display: flex;
   padding: 16px;
+  flex-wrap: wrap; /* säkerställer att det inte bryter på små skärmar */
+  margin-inline: auto; /* centrerar container */
+  max-width: 100%; /* fyller hela bredden */
+}
+
+.container__first-left,
+.container__first-right {
+  width: 100%;
+  max-width: 100%; /* fyller hela bredden på mobil */
+  margin-inline: auto;
 }
 
 .container__first-right {
   display: flex;
-  align-items: end;
+  align-items: flex-end;
   margin-bottom: 40px;
 }
 
+/* 4. Gallery */
 .gallery-container {
   display: block;
   column-count: 3;
   max-width: 1000px;
   margin: 10px auto;
+  padding: 1rem;
 }
 
 .gallery-container img {
@@ -373,7 +397,7 @@ label {
 .awards-container {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr;
-  gap: 2rem 2rem;
+  gap: 2rem;
   max-width: 1000px;
   margin: 2rem auto;
   border-top: 1px solid #ccc;
@@ -407,7 +431,7 @@ label {
   color: #555;
 }
 
-/* Media queries */
+/* 5. Media queries */
 @media (max-width: 1024px) {
   .gallery-container {
     column-count: 2;
@@ -419,34 +443,63 @@ label {
 @media (max-width: 768px) {
   main {
     display: flex;
+    flex-direction: column; /* bättre på små skärmar */
     align-items: center;
+    width: 100%;
+    margin: 0 auto;
   }
   .gallery-container {
     column-count: 1;
+    max-width: 100%;
   }
   .awards-container {
     grid-template-columns: 1fr;
+    max-width: 100%;
+    margin-inline: auto;
   }
   .container__first {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    max-width: 360px;
+    align-items: center;
+    max-width: 100%; /* fyller hela viewport */
+    padding: 0 1rem; /* lite luft på sidorna */
+    margin-inline: auto;
   }
   .font-bold.title {
     font-size: 16px;
     padding-right: 12px;
   }
-  .container__first-left {
-    padding-left: 18px;
+  .container__first-left,
+  .container__first-right {
+    width: 100%;
+    max-width: 100%;
+    margin-inline: auto;
+    padding: 0 0.5rem;
   }
   .container__first-right {
     font-size: 10px;
     margin-bottom: 10px;
+    justify-content: center; /* centrera innehåll */
   }
 }
 @media (max-width: 400px) {
   .container__first {
-    padding: 0px;
+    padding: 0 0.5rem;
+  }
+  .awards-container {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+    margin: 12px;
+    border: none;
+  }
+  .award-year {
+    display: flex;
+    justify-content: start;
+  }
+  .award-name {
+    border-top: #ccc 1px solid;
+    padding-top: 1rem;
   }
 }
 
