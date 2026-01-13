@@ -331,9 +331,8 @@ input {
     max-width: 100%;
   }
 }
-/* 1. Global reset */
 * {
-  box-sizing: border-box; /* viktig för padding + width */
+  box-sizing: border-box;
 }
 
 html, body {
@@ -341,10 +340,9 @@ html, body {
   width: 100%;
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* förhindrar horisontell scroll */
+  overflow-x: hidden;
 }
 
-/* 2. Huvudlayout */
 main {
   max-width: 1000px;
   margin: 0 auto;
@@ -374,19 +372,17 @@ label {
   color: #979797;
 }
 
-/* 3. Container layout */
 .container__first {
   display: flex;
   padding: 16px;
-  flex-wrap: wrap; /* säkerställer att det inte bryter på små skärmar */
-  margin-inline: auto; /* centrerar container */
-  max-width: 100%; /* fyller hela bredden */
+  flex-wrap: wrap;
+  margin-inline: auto;
+  max-width: 100%;
 }
 
-.container__first-left,
-.container__first-right {
+.container__first-left, .container__first-right {
   width: 100%;
-  max-width: 100%; /* fyller hela bredden på mobil */
+  max-width: 100%;
   margin-inline: auto;
 }
 
@@ -396,7 +392,6 @@ label {
   margin-bottom: 40px;
 }
 
-/* 4. Gallery */
 .gallery-container {
   display: block;
   column-count: 3;
@@ -412,7 +407,6 @@ label {
   margin-bottom: 1rem;
 }
 
-/* Award grid */
 .awards-container {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr;
@@ -450,7 +444,6 @@ label {
   color: #555;
 }
 
-/* 5. Media queries */
 @media (max-width: 1024px) {
   .gallery-container {
     column-count: 2;
@@ -462,7 +455,7 @@ label {
 @media (max-width: 768px) {
   main {
     display: flex;
-    flex-direction: column; /* bättre på små skärmar */
+    flex-direction: column;
     align-items: center;
     width: 100%;
     margin: 0 auto;
@@ -481,8 +474,8 @@ label {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 100%; /* fyller hela viewport */
-    padding: 0 1rem; /* lite luft på sidorna */
+    max-width: 100%;
+    padding: 0 1rem;
     margin-inline: auto;
   }
   .font-bold.title {
@@ -498,7 +491,7 @@ label {
   .container__first-right {
     font-size: 10px;
     margin-bottom: 10px;
-    justify-content: start; /* centrera innehåll */
+    justify-content: start;
     align-items: end;
   }
   .award-name {
