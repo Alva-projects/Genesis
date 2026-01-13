@@ -37,7 +37,9 @@ main {
     grid-gap: 15px;
 }
 @media (max-width: 768px) {
-    
+main {
+    padding-inline: auto;
+}
 .projects-container-1 {
     display: block;
 }
@@ -56,4 +58,13 @@ main {
 .projects-container-images img {
     width: 100%;
 }
+    main {
+        padding-inline: 2rem;
+    }
+}
+
+@media (max-width: 400px) {
+    main {
+        padding-inline: 2rem;
+    }
 }

@@ -32,14 +32,15 @@ body {
   display: flex;
   gap: 1rem;
   list-style: none;
-  margin: 0;
+  margin-bottom: 0px;
   padding: 0;
 }
 
 .navbar a {
   text-decoration: none;
   color: black;
-  padding: 12px;
+  padding: 8px;
+  margin-bottom: 100px;
 }
 
 .navbar a:hover {
@@ -95,7 +96,7 @@ body {
     align-items: center;
     padding: 1rem;
     margin: 0 auto;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 
   .nav-logo img {
@@ -111,11 +112,16 @@ body {
 
   /* Footer */
   .footer-navbar {
+    display: flex;
     flex-direction: column;
     align-items: center;
     padding: 1rem;
   }
 
+  .footer-logo {
+    display: flex; 
+    align-items: end;
+  }
   .footer-right {
     flex-direction: column;
     gap: 0.5rem;
@@ -137,7 +143,10 @@ body {
 
   .navbar a, .footer-navbar a {
     margin-bottom: 12px;
-    padding: 6px;
+    padding: 4px;
     text-align: center;
+  }
+  .navbar {
+    display: flex;
   }
 }

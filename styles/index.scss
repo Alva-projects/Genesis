@@ -25,7 +25,6 @@ main {
 
 body, nav, footer {
   width: 100%;
-  max-width: 2000px;
   margin: 0 auto;
 }
 
@@ -91,7 +90,7 @@ label {
   grid-template-columns: 2fr 1fr 1fr 1fr;
   gap: 2rem;
   max-width: 1000px;
-  margin: 2rem auto;
+  margin: 2rem ;
   border-top: 1px solid #ccc;
   padding-top: 1rem;
 }
@@ -169,18 +168,34 @@ label {
     padding-right: 12px;
   }
 
-  .container__first-left,
-  .container__first-right {
+  .container__first-left, .container__first-right {
     width: 100%;
     max-width: 100%;
     margin-inline: auto;
     padding: 0 0.5rem;
+
+
   }
 
   .container__first-right {
     font-size: 10px;
     margin-bottom: 10px;
-    justify-content: center; /* centrera innehåll */
+    justify-content: start; /* centrera innehåll */
+    align-items: end;
+  }
+  .award-name {
+    border-top: #ccc 1px solid;
+    padding-top: 1rem;
+  }
+  .awards-container {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+    margin: 12px;
+    border: none;
+  }
+  .award-year {
+    display: flex;
+    justify-content: start;
   }
 }
 

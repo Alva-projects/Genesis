@@ -33,14 +33,15 @@ body {
   display: flex;
   gap: 1rem;
   list-style: none;
-  margin: 0;
+  margin-bottom: 0px;
   padding: 0;
 }
 
 .navbar a {
   text-decoration: none;
   color: black;
-  padding: 12px;
+  padding: 8px;
+  margin-bottom: 100px;
 }
 
 .navbar a:hover {
@@ -96,7 +97,7 @@ body {
     align-items: center;
     padding: 1rem;
     margin: 0 auto;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
   .nav-logo img {
     width: 80px; /* mindre logga på mobil */
@@ -109,9 +110,14 @@ body {
   }
   /* Footer */
   .footer-navbar {
+    display: flex;
     flex-direction: column;
     align-items: center;
     padding: 1rem;
+  }
+  .footer-logo {
+    display: flex;
+    align-items: end;
   }
   .footer-right {
     flex-direction: column;
@@ -131,8 +137,11 @@ body {
   }
   .navbar a, .footer-navbar a {
     margin-bottom: 12px;
-    padding: 6px;
+    padding: 4px;
     text-align: center;
+  }
+  .navbar {
+    display: flex;
   }
 }
 .mulish {
@@ -217,6 +226,9 @@ main {
 }
 
 @media (max-width: 768px) {
+  main {
+    padding-inline: auto;
+  }
   .projects-container-1 {
     display: block;
   }
@@ -234,6 +246,14 @@ main {
   }
   .projects-container-images img {
     width: 100%;
+  }
+  main {
+    padding-inline: 2rem;
+  }
+}
+@media (max-width: 400px) {
+  main {
+    padding-inline: 2rem;
   }
 }
 .contact-container-1-left {
@@ -333,7 +353,6 @@ main {
 
 body, nav, footer {
   width: 100%;
-  max-width: 2000px;
   margin: 0 auto;
 }
 
@@ -399,7 +418,7 @@ label {
   grid-template-columns: 2fr 1fr 1fr 1fr;
   gap: 2rem;
   max-width: 1000px;
-  margin: 2rem auto;
+  margin: 2rem;
   border-top: 1px solid #ccc;
   padding-top: 1rem;
 }
@@ -470,8 +489,7 @@ label {
     font-size: 16px;
     padding-right: 12px;
   }
-  .container__first-left,
-  .container__first-right {
+  .container__first-left, .container__first-right {
     width: 100%;
     max-width: 100%;
     margin-inline: auto;
@@ -480,7 +498,22 @@ label {
   .container__first-right {
     font-size: 10px;
     margin-bottom: 10px;
-    justify-content: center; /* centrera innehåll */
+    justify-content: start; /* centrera innehåll */
+    align-items: end;
+  }
+  .award-name {
+    border-top: #ccc 1px solid;
+    padding-top: 1rem;
+  }
+  .awards-container {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+    margin: 12px;
+    border: none;
+  }
+  .award-year {
+    display: flex;
+    justify-content: start;
   }
 }
 @media (max-width: 400px) {
