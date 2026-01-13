@@ -127,6 +127,7 @@ body {
   }
   .navbar a {
     padding: 10px;
+    margin: 0px auto;
   }
   .footer-navbar {
     width: 50%;
@@ -441,6 +442,11 @@ label {
   .container__first-right {
     font-size: 10px;
     margin-bottom: 10px;
+  }
+}
+@media (max-width: 400px) {
+  .container__first {
+    padding: 0px;
   }
 }
 
